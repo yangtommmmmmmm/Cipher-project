@@ -49,8 +49,9 @@ def generate_plaintext(message,i):
             output += restored_output
    
     i = str(i)       
-    print("Your key is:" + i +"\n")
-    print("Your plaintext is:" + output +"\n") 
+    #print("Your key is:" + i +"\n")
+    #print("Your plaintext is:" + output +"\n") 
+    return output
     
 
     
