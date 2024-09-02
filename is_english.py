@@ -57,20 +57,18 @@ def is_English(message,wordPercentage,englishPercentage):
     testing = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     stesting = testing + testing.lower() + ' \t\n' 
 
-    res1 = wordPartion(message, stesting)
-
     if message == '':
-        print('This is not an English message!\n')
+        return 'n'
     else:
+        res1 = wordPartion(message, stesting)
         if res1 >= wordPercentage:
            res2 = englishPartion(message,stesting)
            if res2 >= englishPercentage:
-               print('This is an English message!\n')
+               return 'y'
            else:
-               print('This is not an English message!\n')
+               return 'n'
         else:
-            print('This is not an English message!\n')
-
+            return 'n'
 
     
 
